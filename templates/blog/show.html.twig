@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<article>
+    <h2>{{article.title}}</h2>
+    <div class="metadata"> Writing of the {{article.createAt | date('d/m/Y')}} at {{article.createAt | date('H:i')}} </div>
+    <br>
+         <div class="content">
+            <div class="content">
+                <img src="{{ article.image}}" alt="">
+                 <br>
+                {{ article.content}}
+                <br>
+                <br>
+            </div>
+        </div>
+</article>
+
+{% endblock %}
